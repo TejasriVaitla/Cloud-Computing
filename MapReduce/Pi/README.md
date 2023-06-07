@@ -113,4 +113,4 @@ Radius = 200
 
 
 ## Detail Design Presentation
-[Pi calculation using MapReduce]()
+[Pi calculation using MapReduce](https://docs.google.com/presentation/d/1aTvNJYheWPURPCg4rcxIk9d0VDTP9hBArF9o7G1TBLM/edit?usp=sharing)
