@@ -103,12 +103,14 @@ If you cannot ssh to localhost without a passphrase, execute the following comma
 ## Test Result
 
 Test Case:
+
 <img width="600" alt="image" src="https://github.com/TejasriVaitla/Cloud-Computing/assets/128747986/1331fdfc-c6f5-4c1b-9cb0-ea06de964d6f.png">
 
 How many random numbers to generate: 1000000
 Radius = 200
 
 <img width="700" alt="image" src="https://github.com/TejasriVaitla/Cloud-Computing/assets/128747986/fd4a980d-6563-445e-bf19-df847c1f9c06.png">
+
 
 ## Detail Design Presentation
 [Pi calculation using MapReduce]()
