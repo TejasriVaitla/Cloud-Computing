@@ -106,4 +106,4 @@ If you cannot ssh to localhost without a passphrase, execute the following comma
 
 
 ## Detail Design Presentation
-[Full Inverted Index using MapReduce](https://docs.google.com/presentation/d/1aTvNJYheWPURPCg4rcxIk9d0VDTP9hBArF9o7G1TBLM/edit?usp=sharing)
+[Full Inverted Index using MapReduce](https://docs.google.com/presentation/d/1qEEi6oytIXnN_uO2LP9ih8GIHRMNiz3xCDdRikyd1rA/edit?usp=sharing)
