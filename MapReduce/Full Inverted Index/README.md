@@ -80,6 +80,8 @@ If you cannot ssh to localhost without a passphrase, execute the following comma
 * Compile InvertedIndex.java and create a jar
 ```
   $ bin/hadoop com.sun.tools.javac.Main InvertedIndex.java
+  $ cp ../FullInvertedIndex/*.class . 
+  $ cp ../FullInvertedIndex/*.java .
   $ jar cf wc.jar InvertedIndex*class  
 ```
 
