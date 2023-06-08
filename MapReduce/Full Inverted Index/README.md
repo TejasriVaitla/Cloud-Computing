@@ -97,17 +97,13 @@ If you cannot ssh to localhost without a passphrase, execute the following comma
   $ bin/hdfs dfs -ls /user/tvaitla1449/index/output
   $ bin/hdfs dfs -cat /user/tvaitla1449/index/output/part-r-00000 
 ```
+<img width="700" alt="image" src="https://github.com/TejasriVaitla/Cloud-Computing/assets/128747986/13823bf2-e521-4a5a-a98c-32a83851c69e.png">
 
 * Stop
 ```
   $ sbin/stop-dfs.sh
 ```
 
-## Test Result
-
-Test Case:
-
-<img width="700" alt="image" src="https://github.com/TejasriVaitla/Cloud-Computing/assets/128747986/f8b567c4-c709-4603-954f-041cc2d7df12.png">
 
 
 ## Detail Design Presentation
