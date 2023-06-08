@@ -4,7 +4,7 @@
 
 ## Design
 
-* Step 1: Plase draw three tables to show the processes done by mapper, combiner, and reducer to show the Full Inverted Index of these three files:
+* Step 1: Draw three tables to show the processes done by mapper, combiner, and reducer to show the Full Inverted Index of these three files:
    * file 0's content "it is what it is"
    * file 1's content "what is it"
    * file 2's content "it is a banana"
@@ -13,6 +13,9 @@
 * Step 3: Convert a Partial Inverted Index MapReduce program into a Full Inverted Index MapReduce program with the three input files and expected output.
 * Step 4: Use a VM (local or Cloud) or use Eclipse to create a JAR file and then copy the JAR file to Hadoop for processing.
 
+
+* Step 1: Draw three tables to show the processes done by mapper, combiner, and reducer to show the Full Inverted Index of these three files
+<img width="600" alt="image" src="https://github.com/TejasriVaitla/Cloud-Computing/assets/128747986/7cf6658a-6d56-4b8e-8764-2ba4c6d52cfe.png">
 
 # Implement
 
