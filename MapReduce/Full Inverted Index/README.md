@@ -5,10 +5,9 @@
 ## Design
 
 * Step 1: Plase draw three tables to show the processes done by mapper, combiner, and reducer to show the Full Inverted Index of these three files:
-
-* file 0's content "it is what it is"
-* file 1's content "what is it"
-* file 2's content "it is a banana"
+   * file 0's content "it is what it is"
+   * file 1's content "what is it"
+   * file 2's content "it is a banana"
     
 * Step 2: Convert a WordCount MapReduce program into a Partial Inverted Index MapReduce program with the three input files and expected output.
 * Step 3: Convert a Partial Inverted Index MapReduce program into a Full Inverted Index MapReduce program with the three input files and expected output.
