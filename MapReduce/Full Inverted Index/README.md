@@ -52,6 +52,7 @@ If you cannot ssh to localhost without a passphrase, execute the following comma
   $ cat ~/.ssh/id_rsa.pub >> ~/.ssh/authorized_keys
   $ chmod 0600 ~/.ssh/authorized_keys
 ```
+<img width="700" alt="image" src="https://github.com/TejasriVaitla/Cloud-Computing/assets/128747986/a2da0541-eb94-4636-8a0a-aec14e8dd381.png">
 
 ## Make the HDFS directories required to execute MapReduce jobs(Copy input data to HDFS)
 ```
