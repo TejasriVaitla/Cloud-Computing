@@ -35,47 +35,47 @@ Damping factor is 0.85 <br>
 
 Steps:
 1. Enable the Google Cloud Compute Engine API
-<img width="500" alt="image" src="https://github.com/TejasriVaitla/Cloud-Computing/assets/128747986/9985b3b7-b0bf-4a3f-a025-b8f48005ef66.png">
+<img width="400" height="200" alt="image" src="https://github.com/TejasriVaitla/Cloud-Computing/assets/128747986/9985b3b7-b0bf-4a3f-a025-b8f48005ef66.png">
 
-3. Create, Configure and Launch a Google Cloud Dataproc cluster
+2. Create, Configure and Launch a Google Cloud Dataproc cluster
 
-<img width="500" alt="image" src="https://user-images.githubusercontent.com/93315926/199079606-3a427655-e31a-4ad8-bce1-83ceb9a117cd.png">
+<img width="500" alt="cluster" src="https://github.com/TejasriVaitla/Cloud-Computing/assets/128747986/c4bc82e1-d8ee-4d73-a9a1-d52a231820f0.png">
 
-3. Connecting to the Master Node using Secure Shell (ssh) 
+3. Create a Cloud Storage bucket
+<img width="500" alt="cluster" src="https://github.com/TejasriVaitla/Cloud-Computing/assets/128747986/4555dac6-6413-4093-9537-fcc60bb1e0ff.png">
 
-<img width="500" alt="image" src="https://user-images.githubusercontent.com/93315926/199079880-20504e81-56ec-4592-b767-7aefe4efabfd.png">
+4. In the top right corner of the console, click the Activate Cloud Shell button. 
 
-> Detail Steps See Week 4 Homework 2
+<img width="500" alt="image" src="https://github.com/TejasriVaitla/Cloud-Computing/assets/128747986/e585db6f-7940-47b1-90db-e2b4664648d1.png">
+
 
 ## 3.2 Do this question using PySpark
 
 0. Questions
-<img width="161" alt="image" src="https://user-images.githubusercontent.com/93315926/199082222-a50c1257-5be9-4097-8028-53973d9db1eb.png">
+<img width="200" alt="pagerank" src="https://github.com/TejasriVaitla/Cloud-Computing/assets/128747986/b2445701-70bc-49d2-8996-3b4a1f81b243.png">
 
 1. Manually	calculate the	first	2	iteration	of	the	PageRank
 
-* Frist	iteration
-A	=	1
-B	=	(1/2)	=	0.5
-C	=	1	+	(1/2)	=	1.5
-PageRank	(A)	=	1	– 0.85	+	0.85	*	1	=	1
-PageRank	(B)	=	1	– 0.85	+	0.85	*	1 =	0.575
-PageRank	(C) =	1	– 0.85	+	0.85	*	1.5	=	1.425
+* Frist	iteration  <br>
+PR(A) = 1-d + d*PR(C)             = (1- 0.85) + 0.85*1 = 1 <br>
+PR(B) = 1-d + d*PR(A)/2           = (1 - 0.85) + 0.85 * 0.5 = 0.575 <br>
+PR(C) = 1-d + d* (PR(A)/2+PR(B))  = (1 - 0.85) + 0.85 *( 0.5 + 1) = 1.425
 
-* Second	iteration
-A	=	1
-B	=	(1/2)	=	0.5
-C	=	0.575	+	(1/2)	=	1.075
-PageRank	(A)	=	1	– 0.85	+	0.85	*	1.425 =	1.36125
-PageRank (B)	=	1	– 0.85	+	0.85	*	0.5 =	0.575
-PageRank	(C) =	1	– 0.85	+	0.85	*	1.075	=	1.06375
+* Second	iteration <br>
+A	=	1  <br>
+B	=	(1/2)	=	0.575   <br>
+C	=	0.575	+	(1/2)	=	1.425   <br>
+PR(A) = 1-d + d*PR(C)              = (1- 0.85) + 0.85 * 1.425 = 1.36125   <br> 
+PR(B) = 1-d + d*PR(A)/2            = (1 - 0.85) + 0.85 * 0.5 = 0.575    <br>
+PR(C) = 1-d + d* (PR(A)/2+PR(B))   = (1 - 0.85) + 0.85 *( 0.5 + 0.575) = 1.06375
 
-2. Prepare Data in HDFS 
+2. Prepare Data input data file
+   
+* create input folder in bucket 
+<img width="200" alt="pagerank" src="https://github.com/TejasriVaitla/Cloud-Computing/assets/128747986/f100a171-fd13-466e-acba-b2f9e1652fb6.png">
 
-* Manual input data
-```
-vi pagerank_data.txt
-```
+* Upload input data file to input folder
+<img width="200" alt="pagerank" src="https://github.com/TejasriVaitla/Cloud-Computing/assets/128747986/957639ed-11dd-480d-901a-ad44225b7b3d.png">
 
 Data
 ```
@@ -85,66 +85,62 @@ B C
 C A
 ```
 
-* create a directory (folder) to store the data: 
-```
-hdfs dfs -mkdir hdfs:///mydata 
-```
-
-```
-hdfs dfs -put pagerank_data.txt hdfs:///mydata
-```
-
-* To verify that the file is indeed located in the mydata folder, run the following command:  
-```
-hdfs dfs -ls hdfs:///mydata 
-```
-
 3. Prepare the program
 
 The code is on the above py file.
-```
-vi pagerank.py
-```
+
+* Once the Cloud Shell is activated, click on the Open Editor button in the top right corner of the Cloud Shell window. 
+<img width="500" alt="image" src="https://github.com/TejasriVaitla/Cloud-Computing/assets/128747986/e585db6f-7940-47b1-90db-e2b4664648d1.png">
+
+* Click on the new file icon beside your username to create a new file.
+
+* Create pagerank.py file, save the file and close the editor.
 
 4. Running the program with Pyspark 
 
+* Click on activate cloud shell like we did previously. Authenticate with Google Cloud Platform (GCP) 
 ```
-spark-submit pagerank.py hdfs:///mydata/pagerank_data.txt 1
+gcloud auth login
+```
+ <img width="500" alt="image" src="https://github.com/TejasriVaitla/Cloud-Computing/assets/128747986/bb0a6ff1-a878-4ae1-b9ab-8c8767dfab5f.png">
+ 
+```
+gcloud dataproc jobs submit pyspark pagerank.py     --cluster=cluster-387a     --region=us-central1     --     gs://pyspark-bucket2/input/pagerank.txt 1
 ```
 
-> 1 is the iteration count
+> 1 is the iteration count  <br>
+> --cluster = cluster-387a (your cluster name) <br>
+> --region = us-central1 (your region name) <br>
+> gs://pyspark-bucket2/input/pagerank.txt   = path to your input file pagerank.txt
 
 ## 3.3 Result
 
 * First iteration
-<img width="500" alt="image" src="https://user-images.githubusercontent.com/93315926/199089459-b1556744-399b-481c-9706-57639d5e5964.png">
+<img width="500" alt="image" src="https://github.com/TejasriVaitla/Cloud-Computing/assets/128747986/20e1648e-ff57-4557-9e6e-7a8259d2ea10.png">
 
 The result is same as we calculate by hand.
 
 * Second iteration
-<img width="500" alt="image" src="https://user-images.githubusercontent.com/93315926/199089698-20f3bde0-9087-4cbc-aa13-d605ae3245c2.png">
+<img width="500" alt="image" src="https://github.com/TejasriVaitla/Cloud-Computing/assets/128747986/4e7f37ca-6b26-4e45-bd70-4a90c754e3ed.png">
 
 The result is same as we calculate by hand.
 
-* Ten times iteration
-<img width="500" alt="image" src="https://user-images.githubusercontent.com/93315926/199090085-c8bb2283-0207-43bb-bad1-e183114a3d1d.png">
 
 # 4. PageRank + Scala + GCP
 
 ## 4.1 Set up Scala on GCP
 
-> The detailed steps see Week 5 Homework 2
 
 Steps:
 1. Create a Cloud Storage bucket 
-<img width="500" alt="image" src="https://user-images.githubusercontent.com/93315926/199094153-6fd7c07b-5c74-462d-a06b-69f64cf0fc14.png">
+<img width="500" alt="cluster" src="https://github.com/TejasriVaitla/Cloud-Computing/assets/128747986/4555dac6-6413-4093-9537-fcc60bb1e0ff.png">
 
 2. Create a Dataproc cluster 
-<img width="500" alt="image" src="https://user-images.githubusercontent.com/93315926/199095204-53426a89-84bc-414c-a9af-ff0e7cf5d1eb.png">
+<img width="500" alt="cluster" src="https://github.com/TejasriVaitla/Cloud-Computing/assets/128747986/c4bc82e1-d8ee-4d73-a9a1-d52a231820f0.png">
 
 3. Connecting to the Master Node using Secure Shell (ssh) 
 
-<img width="500" alt="image" src="https://user-images.githubusercontent.com/93315926/199095683-474bd92d-671a-4922-8b7a-0d538ee92193.png">
+<img width="500" alt="image" src="https://github.com/TejasriVaitla/Cloud-Computing/assets/128747986/12bc8e58-cb41-4638-903b-847b1ab5d758.png">
 
 4. install scala
 ```
@@ -155,13 +151,13 @@ $ export PATH=$PATH:$SCALA_HOME/
 
 ## 4.2 Do this question using Scala
 
-1.Prepare data
+2. Prepare Data input data file
+   
+* create input folder in bucket 
+<img width="200" alt="pagerank" src="https://github.com/TejasriVaitla/Cloud-Computing/assets/128747986/f100a171-fd13-466e-acba-b2f9e1652fb6.png">
 
-Manual input data
-
-```
-vi pagerank_data.txt
-```
+* Upload input data file to input folder
+<img width="200" alt="pagerank" src="https://github.com/TejasriVaitla/Cloud-Computing/assets/128747986/957639ed-11dd-480d-901a-ad44225b7b3d.png">
 
 Data
 ```
@@ -171,37 +167,28 @@ B C
 C A
 ```
 
-create a directory (folder) to store the data:
-```
-hdfs dfs -mkdir hdfs:///mydata 
-hdfs dfs -put pagerank_data.txt hdfs:///mydata
-```
-
-To verify that the file is indeed located in the mydata folder, run the following command:
-```
-hdfs dfs -ls hdfs:///mydata 
-```
-
 3. Prepare the program and Runing the program
 ```
 spark-shell
 ```
+<img width="500" alt="image" src="https://github.com/TejasriVaitla/Cloud-Computing/assets/128747986/121f4efb-62d2-4407-b67f-fbe30e726633.png">
+
 
 * First iteration
  
-<img width="500" alt="image" src="https://user-images.githubusercontent.com/93315926/199160775-35eb0036-5212-49b0-bb90-25806ba57c5e.png">
+<img width="500" alt="image" src="https://github.com/TejasriVaitla/Cloud-Computing/assets/128747986/d19412de-030d-4be0-a37a-c48b923de835.png">
 
 * Second iteration
 
-<img width="500" alt="image" src="https://user-images.githubusercontent.com/93315926/199160980-e315b28e-3e8b-4e65-9c00-d33f7c093103.png">
+<img width="500" alt="image" src="https://github.com/TejasriVaitla/Cloud-Computing/assets/128747986/c396b1cc-0f34-4bd3-9bf0-3b4753536891.png">
 
-* Ten times iteration
 
-<img width="500" alt="image" src="https://user-images.githubusercontent.com/93315926/199161098-76428030-9256-4a2d-9d5a-7e65e6fa7898.png">
+# 5 Shutting down the Cluster and bucket
 
-# 5 Shutting down the Cluster 
- 
- <img width="500" alt="image" src="https://user-images.githubusercontent.com/93315926/199174391-dc21b7f3-20ea-434f-a494-98d8507fae5b.png">
+ * Delete or Stop cluster
+ <img width="500" alt="image" src="https://github.com/TejasriVaitla/Cloud-Computing/assets/128747986/863468df-6ce1-42cf-a5ef-171dc3601749.png">
 
- 
+ * Delete bucket
+<img width="500" alt="image" src="https://github.com/TejasriVaitla/Cloud-Computing/assets/128747986/32bf3a4d-5544-42b4-b848-e7cbad9c685f.png">
+
 # 6. Detail Design Presentation 
