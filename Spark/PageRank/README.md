@@ -103,7 +103,9 @@ The code is on the above py file.
 gcloud auth login
 ```
  <img width="500" alt="image" src="https://github.com/TejasriVaitla/Cloud-Computing/assets/128747986/bb0a6ff1-a878-4ae1-b9ab-8c8767dfab5f.png">
- 
+
+* Submit the PySpark job to Dataproc
+  
 ```
 gcloud dataproc jobs submit pyspark pagerank.py     --cluster=cluster-387a     --region=us-central1     --     gs://pyspark-bucket2/input/pagerank.txt 1
 ```
