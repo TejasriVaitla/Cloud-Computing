@@ -194,3 +194,4 @@ spark-shell
 <img width="500" alt="image" src="https://github.com/TejasriVaitla/Cloud-Computing/assets/128747986/32bf3a4d-5544-42b4-b848-e7cbad9c685f.png">
 
 # 6. Detail Design Presentation 
+[PageRank using Spark](https://docs.google.com/presentation/d/1IzL1jjukAwHsJUa0DEWfG6Sq3Uc8YAAphOAmdiw-jb8/edit?usp=sharing)
