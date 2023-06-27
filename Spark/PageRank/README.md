@@ -1,11 +1,12 @@
 # 1.PageRank Theory
 
-<img width="200" alt="image" src="https://user-images.githubusercontent.com/93315926/199075533-ecaf0d4d-45d7-4133-b285-05b0efca2edb.png">
+<img width="200" alt="pagerank theory" src="https://github.com/TejasriVaitla/Cloud-Computing/assets/128747986/887e34ea-6d64-49e5-bcd0-1c1c4bac2378.png">
 
-1. If The initial PageRank value for each webpage is 1. <br>
+
+1. Assume The initial PageRank value for each webpage is 1. <br>
 PR(A) = 1  <br>
-PR(B) = 1 <br>
-PR(C) = 1<br>
+PR(B) = 1  <br>
+PR(C) = 1  <br>
 Page B has a link to pages C and A<br>
 Page C has a link to page A<br>
 Page D has links to all three pages<br>
@@ -15,37 +16,28 @@ A's PageRank is: PR(A) = (1-d) + d * (PR(B) / 2 + PR(C) / 1 + PR(D) / 3)<br>
 B's PageRank is: PR(B) = (1-d) + d * (PR(D) / 3)<br>
 C's PageRank is: PR(C) = (1-d) + d * (PR(B) / 2 + PR(D) / 3)<br>
 D's PageRank is: PR(D) = 1-d<br>
-Damping factor is 0.85<br>
+Damping factor is 0.85 <br>
 
-3. Then after 1st iteration <br>
+3. 1st iteration <br>
 
   * Page B would transfer half of its existing value, or 0.5, to page A and the other half, or 0.5, to page C.
   * Page C would transfer all of its existing value, 1, to the only page it links to, A.
   * Since D had three outbound links, it would transfer one third of its existing value, or approximately 0.33, to A.
-  * PR(A)= (1-d) + d * (PR(B) / 2 + PR(C) / 1 + PR(D) / 3) = (1-0.85) + 0.85 * (0.5 + 1 + 0.33) = 1.71
-  * PR(B)= (1-d) + d * (PR(D) / 3)= (1-0.85) + 0.85 * 0.33 = 0.43
-  * PR(C)= (1-d) + d * (PR(B) / 2 + PR(D) / 3)= (1-0.85) + 0.85 * (0.5 + 0.33)= 0.86
-  * PR(D)= 1-d= 0.15
+  * PR(A)= (1-d) + d * (PR(B) / 2 + PR(C) / 1 + PR(D) / 3) = (1 - 0.85) + 0.85 * (0.5 + 1 + 0.33) = 1.71
+  * PR(B)= (1-d) + d * (PR(D) / 3)= (1 - 0.85) + 0.85 * 0.33 = 0.43
+  * PR(C)= (1-d) + d * (PR(B) / 2 + PR(D) / 3)= (1 - 0.85) + 0.85 * (0.5 + 0.33) = 0.86
+  * PR(D)= 1-d = 0.15
 
-4. You can keep iterate<br>
-....
 
-# 2.Observation of PageRank
+# 2.PageRank + PySpark + GCP
 
-A web page does not have input will have:
-* constant PageRank: 1-d
-* the smallest PageRank
-Input Web Pages' impact to the PageRank of a web page:
-* The more Input Web Pages the better.
-* The higher PageRank of an Input Web Page the better.
-
-# 3.PageRank + PySpark + GCP
-
-## 3.1 Set up PySpark on GCP
+## 2.1 Set up PySpark on GCP
 
 Steps:
 1. Enable the Google Cloud Compute Engine API
-2. Create, Configure and Launch a Google Cloud Dataproc cluster
+<img width="500" alt="image" src="https://github.com/TejasriVaitla/Cloud-Computing/assets/128747986/9985b3b7-b0bf-4a3f-a025-b8f48005ef66.png">
+
+3. Create, Configure and Launch a Google Cloud Dataproc cluster
 
 <img width="500" alt="image" src="https://user-images.githubusercontent.com/93315926/199079606-3a427655-e31a-4ad8-bce1-83ceb9a117cd.png">
 
