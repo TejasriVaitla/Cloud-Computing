@@ -56,7 +56,7 @@ gcloud dataproc jobs submit pyspark pi.py --cluster=cluster-fdec --region=us-cen
 > gs://pyspark-bucket2/output  = path to save your output  (specifying gs://pyspark-bucket2/output will automatically creates output folder, no need to create it specifically)
 
 <img width="500" alt="image" src="https://github.com/TejasriVaitla/Cloud-Computing/assets/128747986/8033e9cd-2317-4bf1-8ac6-be5e533b8704.png">
-
+## Output
 * List the files in the output directory on Google Cloud Storage, copy them to the current directory, and append the contents of one file to another and display output
 ```
 gsutil ls gs://pyspark-bucket2/output/
@@ -67,7 +67,6 @@ cat part-00000-f9a97f44-0c0e-4791-a1a2-20edc29ad309-c000.json
 <img width="500" alt="image" src="https://github.com/TejasriVaitla/Cloud-Computing/assets/128747986/d54641d9-ff67-4918-853a-62dd693e3cbd.png">
 <img width="500" alt="image" src="https://github.com/TejasriVaitla/Cloud-Computing/assets/128747986/ca9fb2fe-4e36-4d2f-adce-445af7caa40a.png">
 <img width="500" alt="image" src="https://github.com/TejasriVaitla/Cloud-Computing/assets/128747986/b69c291f-8e47-413a-b9ee-9f63531e9057.png">
-* Output
 <img width="500" alt="image" src="https://github.com/TejasriVaitla/Cloud-Computing/assets/128747986/096d3bf2-1ee5-455f-abf6-2bd021770888.png">
 
 
