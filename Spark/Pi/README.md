@@ -68,8 +68,8 @@ cat part-00000-f9a97f44-0c0e-4791-a1a2-20edc29ad309-c000.json
 <img width="500" alt="image" src="https://github.com/TejasriVaitla/Cloud-Computing/assets/128747986/ca9fb2fe-4e36-4d2f-adce-445af7caa40a.png">
 <img width="500" alt="image" src="https://github.com/TejasriVaitla/Cloud-Computing/assets/128747986/b69c291f-8e47-413a-b9ee-9f63531e9057.png">
 <img width="500" alt="image" src="https://github.com/TejasriVaitla/Cloud-Computing/assets/128747986/096d3bf2-1ee5-455f-abf6-2bd021770888.png">
-* Explanation
-* Number of tries = 400000, number of hits = 314032  <br>
+* Explanation  <br>
+Number of tries = 400000, number of hits = 314032  <br>
 Pi = 3.14032
 
 ## Detail Design Presentation
