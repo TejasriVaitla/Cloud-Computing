@@ -73,4 +73,4 @@ cat part-00000-f9a97f44-0c0e-4791-a1a2-20edc29ad309-c000.json
 Pi = 3.14032
 
 ## Detail Design Presentation
-[Pi calculation using MapReduce and spark](https://docs.google.com/presentation/d/1aTvNJYheWPURPCg4rcxIk9d0VDTP9hBArF9o7G1TBLM/edit?usp=sharing)
+[Pi calculation using spark](https://docs.google.com/presentation/d/1aTvNJYheWPURPCg4rcxIk9d0VDTP9hBArF9o7G1TBLM/edit?usp=sharing)
