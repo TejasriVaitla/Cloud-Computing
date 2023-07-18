@@ -38,6 +38,7 @@ gcloud dataproc jobs submit pyspark gs://pyspark-bucket3/recommendation_example.
 ![image](https://github.com/TejasriVaitla/Cloud-Computing/assets/128747986/1edeaee6-0666-4f08-93c1-3a4f9838d81f)
 
 * Output
+  
 ![image](https://github.com/TejasriVaitla/Cloud-Computing/assets/128747986/e39cb682-1438-4b49-98f1-2292826d982f)
 
 # Detail Design Presentation 
