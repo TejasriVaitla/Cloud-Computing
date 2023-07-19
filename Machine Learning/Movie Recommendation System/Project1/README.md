@@ -43,4 +43,4 @@ gcloud dataproc jobs submit pyspark gs://pyspark-bucket3/recommendation_example.
 
 # Detail Design Presentation 
 
-[Movie Recommendation with MLlib]
+[Movie Recommendation with MLlib](https://docs.google.com/presentation/d/1cyF85lSHc6Rj82PyWQXQD6gMnrtwufqX9bhDsF65n1s/edit?usp=sharing)
