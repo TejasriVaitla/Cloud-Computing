@@ -29,13 +29,21 @@ This project implements Movie Recommendation using Collaborative Filtering with 
   * 3.5. Run the .py file on Google Cloud Platform's Dataproc cluster to scale up the recommendation process.
 ## Implementation on GCP
 * Create a Dataproc cluster
-  
+* Create bucket and upload python script file and input files 
+* Submit a job
+ > Ensure you have your Python script and input files (if any) uploaded to a GCS bucket. <br>
+ > Open Google Cloud Shell. <br>
+ > Use the following command to submit the job to the Dataproc cluster:
+```
+gcloud dataproc jobs submit pyspark gs://pyspark_bucket3/recommendation_engine_movielens.py \
+    --cluster=cluster-92ba \
+    --region=us-central1
+```
+## Output
 
-
-
-
-
-
+![image](https://github.com/TejasriVaitla/Cloud-Computing/assets/128747986/826d3a2d-94a5-4785-be57-4d81f9849196)
+![image](https://github.com/TejasriVaitla/Cloud-Computing/assets/128747986/4ef75368-0655-40de-afb9-d243db28bbbc)
+![image](https://github.com/TejasriVaitla/Cloud-Computing/assets/128747986/ebbce331-7a42-4bab-95aa-23fd5faa49ba)
 
 
 
