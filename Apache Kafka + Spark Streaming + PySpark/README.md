@@ -11,7 +11,7 @@ This guide outlines the steps to set up an environment for working with Kafka, S
 2. Creating a PySpark app for consume and process the events and write back to Kafka.
 4. Steps to produce and consume events using Kafka-Python.
 
-## 3. Environment install
+## 3. Environment Setup
 
 1. Create, Configure and Launch a Google Cloud Dataproc cluster.
 
